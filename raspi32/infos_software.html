@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<title>Project - RaspberryPi32</title>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="images/favicon.png"/>
+	<!--[if IE 7]>
+		<link href="css/ie7.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-48290515-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header"> <a href="index.html" id="logo"><img src="images/logo.png" width="295" height="55" alt="RaspberryPi32"></a>
+				<ul class="navigation">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a class="active" href="project.html">Project</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+				</ul>
+			</div>
+			<!-- start of body-->
+			<div id="body">
+				<div id="content">
+					<h2>The project</h2>
+					<ul class="list">
+						<li>
+							<img src="images/thumb_soft_1.png" width="156" height="156" alt="">
+						</li>
+						<li>
+							<img src="images/thumb_soft_3.png" width="156" height="156" alt="">
+						</li>
+						<li>
+							<img src="images/thumb_soft_2.png" width="156" height="156" alt="">
+						</li>
+						<li>
+							<img src="images/thumb_soft_4.png" width="156" height="156" alt="">
+						</li>
+					</ul>
+					<div class="details">
+						<h3>Software</h3>
+						<p>
+							As this project aims to build a cluster, it should be able to perform distributed computations just as its bigger brothers. And since the cluster's first purpose is education it is important that it provides a way to monitor its state through an execution.
+						</p>
+						<h4>Pin toggling</h4>
+						<p>
+							The state-monitoring task is achieved using the Raspberry Pi's pins. As a simple example we built a logical ring: a set of interconnected devices pass around a token such that only one device at a time possesses the token (this can be used for instance to avoid collisions in network communications). Pin toggling becomes interesting in such a situation because a device can set a pin high upon token arrival and low when it is sent further. By simply connecting a logical analyzer or an oscilloscope to the pins, one can then easily see where the token is and when.
+						</p>
+						<p>
+							To perform such pin toggling operation, a small experiment was performed: comparing Java and C. The methodology was quite simple: toggling a pin as fast as possible in both languages and measure the time needed to perform one high/low cycle (i.e. the signal period).<br/>
+							The code used in the Java version relies on a library called Pi4J and allows easy access to the low-level peripherals of the Raspberry Pi, such as the GPIO pins we are interested into. The C code comes from a very good <a href="http://www.pieter-jan.com/node/15">article</a> by Pieter-Jan Van de Maele showing how to directly access these pins.<br/>
+							The results are irrevocable: while Java has an average period of 208.77 μs, C performs the same task in 80 ns. That is to say C is nearly 24'000 times faster than Java (in that particular task).
+						</p>
+						<h4>Distributed calculus</h4>
+						<p>
+							RaspberryPi32 performs distributed computations using MPICH, an implementation of the classical yet highly efficient Message Passing Interface (MPI). Simon J. Cox et al. provided a very good tutorial on installing MPICH on the Raspberry Pi. This instruction set can be found <a href="http://www.southampton.ac.uk/~sjc/raspberrypi/pi_supercomputer_southampton.htm">here</a>. The outcome of this manipulation is that the cluster calculated pi, demonstrating that it has the abilities of a real supercomputer.
+						</p>
+						<p>
+							More details about the code used to perform pin toggling or how pi is computed can be found in the paper available on the 'About' page.
+						</p>
+						<a href="project.html" class="readmore">Back</a>
+						<span class="date">February 18, 2014</span> </div>
+				</div>
+				<div id="section">
+					<div class="footer">
+						<div class="body">
+							
+					</div>
+				</div>
+			</div>
+			<!-- end of body-->
+			<div id="footer">
+				<div>
+					<div class="header"> <a href="index.html"><img class="logo" src="images/logo2.png" width="187" height="37" alt="RaspberryPi32"></a>
+						<ul class="connect">
+							<li>
+								<a href="https://www.facebook.com/thepizone" class="facebook">&nbsp;</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/Raspberry_Pi" class="twitter">&nbsp;</a>
+							</li>
+							<li>
+								<a href="https://plus.google.com/+raspberrypi" class="googleplus">&nbsp;</a>
+							</li>
+						</ul>
+					</div>
+					<div class="body">
+						<ul class="navigation">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="project.html">Project</a>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="footnote"> Creative Commons Licence - 2014 - LAP + LSR</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

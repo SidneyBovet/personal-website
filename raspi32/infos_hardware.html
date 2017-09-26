@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<title>Project - RaspberryPi32</title>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/png" href="images/favicon.png"/>
+	<!--[if IE 7]>
+		<link href="css/ie7.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-48290515-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			<div id="header"> <a href="index.html" id="logo"><img src="images/logo.png" width="295" height="55" alt="RaspberryPi32"></a>
+				<ul class="navigation">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a class="active" href="project.html">Project</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+				</ul>
+			</div>
+			<!-- start of body-->
+			<div id="body">
+				<div id="content">
+					<h2>The project</h2>
+					<ul class="list">
+						<li>
+							<img src="images/thumb_hard_1.png" width="156" height="156" alt="">
+						</li>
+						<li>
+							<img src="images/thumb_hard_2.png" width="156" height="156" alt="">
+						</li>
+						<li>
+							<img src="images/thumb_hard_3.png" width="156" height="156" alt="">
+						</li>
+					</ul>
+					<div class="details">
+						<h3>The Hardware</h3>
+						<p>
+							The structure of the cluster basically consists of Raspberry Pis interconnected with Ethernet switches and powered by a home-made printed circuit board. This backplane is 6-to-24V powered and features a DC/DC converter to provide the 5V micro USB. It also homes a 16-bit AD7689 analogical to digital converter to evaluate the power consumption of each board. If you want more details about this self-evaluation mechanism, feel free to download the paper on the 'About' page and read section 5.
+						</p>
+						<p>
+							The backplanes home eight Raspberry Pi each, so that it is possible to have four smaller modules for a lab session. Each module has two 5-port Netgear Ethernet switches (one of which supports Gigabit) and, for these modules to be really independent, a structure was created such that these switches are fixed to the eight Raspberry they are connected to. The two Ethernet switches are connected with each other using an uplink cat. 6 wire.<br/>When willing to work with the whole cluster, all that's needed is to connect each of the routers to a headend full Gigabit switch.
+						</p>
+						<a href="project.html" class="readmore">Back</a>
+						<span class="date">February 18, 2014</span>
+					</div>
+				</div>
+				<div id="section">
+					<div class="footer">
+						<div class="body">
+							
+					</div>
+				</div>
+			</div>
+			<!-- end of body-->
+			<div id="footer">
+				<div>
+					<div class="header"> <a href="index.html"><img class="logo" src="images/logo2.png" width="187" height="37" alt="RaspberryPi32"></a>
+						<ul class="connect">
+							<li>
+								<a href="https://www.facebook.com/thepizone" class="facebook">&nbsp;</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/Raspberry_Pi" class="twitter">&nbsp;</a>
+							</li>
+							<li>
+								<a href="https://plus.google.com/+raspberrypi" class="googleplus">&nbsp;</a>
+							</li>
+						</ul>
+					</div>
+					<div class="body">
+						<ul class="navigation">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="project.html">Project</a>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="footnote"> Creative Commons Licence - 2014 - LAP + LSR</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

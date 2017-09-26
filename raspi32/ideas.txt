@@ -1,0 +1,9 @@
+dans about:
+mettre le papier en pdf
+(plus nom, adresse, collaborateurs/superviseurs, labos, etc.)
+
+enlever "services" et à la place de "blog" mettre une section avec Hard/Soft/Pictures (cf liens en bas de home et about)
+
+enlever les "this page presents the hardware" puisque les trois sur une seule page
+
+dans le footer: creative commons, LAP, LSR : links
