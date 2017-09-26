@@ -1,0 +1,3 @@
+[submodule "distortion"]
+	path = distortion
+	url = git@github.com:SidneyBovet/amplified-embodiment.git
